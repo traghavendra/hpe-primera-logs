@@ -14,11 +14,11 @@ html_start = """
         <meta name = "generator" content = "Jekyll v3.8.5" />
         <meta property = "og:title" content = "HPE Storage CI LOGS" />
         <meta property = "og:locale" content = "en_US" />
-        <link rel = "canonical" href = "https://hpe-storage.github.io/hpe_primera_logs/" />
-        <meta property = "og:url" content = "https://hpe-storage.github.io/hpe_primera_logs/" />
+        <link rel = "canonical" href = "https://hpe-storage.github.io/hpe-primera-logs/" />
+        <meta property = "og:url" content = "https://hpe-storage.github.io/hpe-primera-logs/" />
         <meta property = "og:site_name" content = "HPE Storage CI LOGS" />
         <script type = "application/ld+json">
-        {"@type": "WebSite", "headline": "HPE Storage CI LOGS", "url": "https://hpe-storage.github.io/hpe_primera_logs/", "name": "HPE Storage CI LOGS", "@context": "http://schema.org"} </script>
+        {"@type": "WebSite", "headline": "HPE Storage CI LOGS", "url": "https://hpe-storage.github.io/hpe-primera-logs/", "name": "HPE Storage CI LOGS", "@context": "http://schema.org"} </script>
         <!-- End Jekyll SEO tag -->
     </head>
     <body>
@@ -90,7 +90,7 @@ def create_html(path):
             if '.html' not in i:
                 if os.path.isdir(new_path):
                     table_start = table_start + \
-                        "<tr><td><a href = 'https://hpe-storage.github.io/hpe_primera_logs/{}/{}.html'>{}</a></td></tr>\n".format(
+                        "<tr><td><a href = 'https://hpe-storage.github.io/hpe-primera-logs/{}/{}.html'>{}</a></td></tr>\n".format(
                             new_path.split(sys.argv[1])[-1], i, i)
                     # Recurse for next folder
                     create_html(new_path)
@@ -100,7 +100,7 @@ def create_html(path):
                         os.rename(new_path, new_path + '.txt')
                         i = i + '.txt'
                     table_start = table_start + \
-                        "<tr><td><a href = 'https://hpe-storage.github.io/hpe_primera_logs/{}'>{}</a></td></tr>\n".format(
+                        "<tr><td><a href = 'https://hpe-storage.github.io/hpe-primera-logs/{}'>{}</a></td></tr>\n".format(
                             new_path.split(sys.argv[1])[-1], i)
 
         table_data = table_start + "</table>\n"
